@@ -82,12 +82,12 @@ const PhoneIllustration = () => {
 
                 <ChatText text="She looks so happy! The time we discussed works. How long shall I take her out for?" classname="left"/>
                 <ChatText classname="gradient-chat-text left">
-                    <input type="radio" className="radio"/>
+                    <div className="radio"/>
                     <p>30 minute walk</p>
                     <p>$29</p>
                 </ChatText>
                 <ChatText classname="gradient-chat-text left">
-                <input type="radio" className="radio"/>
+                    <div className="radio"/>
                     <p>1 hour walk</p>
                     <p>$49</p>
                 </ChatText>
