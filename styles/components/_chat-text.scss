@@ -1,0 +1,63 @@
+.chat-text{
+    font-size: 8px;
+    
+    line-height: 0.75rem;
+   
+    margin-bottom: 0.5rem;
+    padding: 0.35rem 0.4rem;
+    
+    
+    &.left{
+        width:126px;
+        border-radius: 6px 10px 10px 3px;
+        background: #efe3f9;
+        color: $chat-left-text;
+        
+        &.gradient-chat-text{
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            width: 158px;
+            background: linear-gradient(to left, $primary2, $primary1);
+            color: #efe3f9;
+            padding: 0.58rem 0.4rem 0.58rem 0.4rem;
+            
+            .radio{
+                margin-right: 0.5rem;
+                width: 13px;
+                height: 13px;
+                appearance: none;
+                border:1px solid $radio-btn-outline;
+                border-radius: 50%;
+            }
+
+            p{
+                &:first-of-type{
+                    width:90px;
+                }
+
+                &:last-of-type{
+                    color: white;
+                    font-weight: 500;
+                    font-size: 12px;
+                }
+            }
+        }
+    }
+
+    &.right{
+        width:126px;
+        background: white;
+        color: $chat-right-text;
+        border-radius: 10px 6px 3px 10px;
+        box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+        
+        &.small{
+            width: auto;
+            display: inline !important;
+        }
+    }
+
+  
+
+}

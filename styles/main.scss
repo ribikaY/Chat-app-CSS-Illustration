@@ -1,0 +1,12 @@
+//base
+@import "./base/base";
+@import "./base/mixins.scss";
+@import "./base/variables";
+
+//components
+@import "./components/title";
+@import "./components/chat-text";
+@import "./components/image";
+
+//pages
+@import "./pages/home";

@@ -1,0 +1,303 @@
+main{
+    background: #FAFAFA;
+    .layout{
+        display: flex;
+        justify-content: space-between;
+        height: 100vh;
+        min-height: auto;
+        width: 100%;
+        position: relative;
+        overflow-x:hidden ;
+        
+        &-img{
+            width: 100%;
+            position: relative;
+
+            &.left{ 
+                right: 59px;
+                height: 52%;
+                border-bottom-right-radius: 230px;
+                border-bottom-left-radius: 30px;
+                background: linear-gradient(210deg, $primary1 0, $primary2 70%, #8739ff 30%);
+                box-shadow: rgba(0, 0, 0, 0.04) 0px 3px 5px;
+            }
+
+            &.right{
+                align-self: flex-end;
+                height: 52%;
+                left: 58px;
+                border-top-right-radius: 20px;
+                border-top-left-radius: 230px;
+                background: linear-gradient(180deg, rgba(174, 26, 194, 0.04) 0.03%, rgba(236, 89, 255, 0.04) 55.62%, rgba(233, 66, 255, 0.02) 99.97%);
+            }
+        }
+
+        .chat{
+            position: absolute;
+            transform: translate(-50%, -50%);
+            top:60%;
+            left:53%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 10;
+            padding-bottom: 4rem;
+
+            &-image{
+                position: relative;
+                display: flex;
+                border-radius: 30px;
+                width: 249px;
+                height:510px;
+                background: $phone-bg;
+                box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+
+                .phone{
+                    width: 91%;
+                    height: 96%;
+                    margin: auto;
+                    background-color: $bg-color;
+                    border-radius: 20px;
+                    overflow: hidden;
+
+                    span{
+                        position: absolute;
+                        top:0;
+                        left: 24%;
+                        width: 129px;
+                        height: 28px;
+                        background: $phone-bg;
+                        border-bottom-left-radius: 15px;
+                        border-bottom-right-radius: 15px;
+                    }
+
+                    &-header{
+                        width: 100%;
+                        height: 65px;
+                        background: linear-gradient(to left, $primary1, $primary2);
+                        display: flex;
+                        justify-content: space-between;
+                        align-items: center;
+                        padding: 0 1rem;
+                        padding-top: 1rem;
+
+                        .settings{
+                            width: 2px;
+                            height: 9px;
+                        }
+
+                        .left-icon{
+                            width: 4px;
+                            height: 10px;
+                            transform: rotate(180deg);
+                        }
+
+                        .left{
+                            display: flex;
+                            align-items: center;
+                            .profile{
+                                margin-left: 0.6rem;
+                                display: flex;
+                                .avatar{
+                                    width: 24px;
+                                    height: 24px;
+                                    border-radius: 50%;
+                                    border:1px solid white;
+                                }
+
+                                div{
+                                    margin-left: 0.5rem;
+                                    color: #efe3f9ea;
+                                    font-size: 11px;
+                                    font-weight: 500;
+                                    letter-spacing: 0.1px;
+
+                                    .profile-status{
+                                        font-weight: 400;
+                                        font-size: 8px;
+                                        margin-top: 0.15rem;
+                                        color: hsl(289, 67%, 76%);
+                                        letter-spacing: normal;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    
+
+                    &-body{
+                        padding:0.7rem 0.5rem;
+
+                        .chat-text-right{
+                            display: flex;
+                            flex-direction: column;
+                            align-items: flex-end;
+                            justify-content: flex-end;
+
+                            &.phone-body-images{
+                                flex-direction: row;
+                                margin-bottom: 0.5rem;
+                            }
+                        }
+
+                        &-images{
+                            display: flex;
+                            margin-bottom: 0.5rem;
+                            margin-top: 1rem;
+                        }
+
+                        .small{
+                            margin-bottom: 1rem;
+                        }
+                    }
+
+                    &-bottom{
+                        background: $phone-bg;
+                        height: 31px;
+                        border-radius: 20px;
+                        margin-top: 1rem;
+                        display: flex;
+                        justify-content: space-between;
+                        align-items: center;
+                        padding:0 6px 0 13px;
+
+                        p{
+                            color:$placeholder-text;
+                            font-size: 9px;
+                        }
+
+                        .submit-button{
+                            width: 25px;
+                            height: 25px;
+                            border-radius: 50%;
+                            background: $submit-btn;
+                            color:white;
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+
+                            .icon-chat-footer{
+                                width: 6px;
+                                height: 9px;
+                            }
+                        }
+                    }
+                }
+            }
+
+            &-content{
+                align-self: center;
+                text-align: center;
+                width: 300px;
+                margin-top: 4rem;
+                &-text{
+                    margin-top: 2rem;
+                    color:$paragraph-color;
+                    font-size: 16px;
+                    line-height: 1.7rem;
+                }
+
+                @include respond(tab-port){
+                    width: 550px;
+                }
+
+                @include respond(tab-land){
+                    text-align: left;
+                    margin-top: 0;
+                }
+            }
+        }
+    }
+
+    @include respond(tab-port){
+        .layout{
+            &-img{
+                &.left{
+                    border-bottom-left-radius: 90px;
+                }
+    
+                &.right{
+                    border-top-right-radius: 90px;
+                }
+            } 
+        }    
+    }
+
+
+   @include respond(tab-land){
+        .layout{
+            height: 100vh;
+            overflow: hidden;
+            &-img{
+                width: 379px;
+                &.left{
+                    right: 59px;
+                    height: 85%;
+                    border-bottom-right-radius: 250px;
+                    border-bottom-left-radius: 230px;
+                }
+    
+                &.right{
+                    align-self: flex-end;
+                    height: 83%;
+                    left: 158px;
+                    border-top-right-radius: 200px;
+                    border-top-left-radius: 250px;
+                }
+            }  
+            
+            .chat{
+                width: 800px;
+                height:510px;
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                align-items: auto;
+                top:50%;
+                padding-bottom: 0;
+
+                &-image{
+                    margin-left:2rem;
+                }
+
+                &-content{
+                    align-self: center;
+                    width: 464px;
+                    padding: 0.5rem;
+                    &-text{
+                        text-align: left;
+                        margin-top: 2rem;
+                        font-size: 16px;
+                        line-height: 1.7rem;
+                    }
+                }
+            }  
+        }
+   }
+
+   @include respond(desktop){
+      .layout{
+        
+        &-img{
+            width: 479px;
+
+            &.left{
+                height: 87%;
+            }
+
+            &.right{
+                align-self: flex-end;
+                height: 85%;
+            }
+        }   
+
+        .chat{
+            width: 860px;
+        }    
+      }
+
+      
+   }
+}
+
